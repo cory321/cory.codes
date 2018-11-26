@@ -27,7 +27,7 @@
 
 html {
   font-size: 62.5%;
-  border: 3rem solid #171a20;
+  border: 2rem solid #171a20;
 }
 
 body {
@@ -53,10 +53,11 @@ code {
 // }
 
 .header {
-  background: #1d2027 linear-gradient(45deg, #1d2027, #323e4e);
   font-size: 2rem;
   min-height: 70vh;
   padding: 2rem;
+  background: #1d2027 linear-gradient(45deg, #1d2027, #323e4e);
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 
 .header .navigation {
@@ -98,9 +99,34 @@ code {
   }
 }
 
+.hero-message {
+  font-family: "Futura Pt";
+  font-size: 4.5rem;
+  font-weight: 100;
+  padding-top: 5rem;
+}
+
 .logo-box {
   margin: 2rem;
   text-align: left;
+}
+
+.mobile-components-box {
+  text-align:center;
+}
+
+.mobile-components-image {
+  height: 35rem;
+}
+
+.underline-warm {
+  background: transparent linear-gradient(to right, #d435d8, #e80463, #f34841) no-repeat 0 93%;
+  background-size: 100% 0.4rem;
+}
+
+.underline-cool {
+  background: transparent linear-gradient(to right, #ffc000, #ffb400, #f55e31) no-repeat 0 93%;
+  background-size: 100% 0.4rem;
 }
 
 @include respond(phone) {
