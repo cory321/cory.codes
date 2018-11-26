@@ -27,7 +27,7 @@
 
 html {
   font-size: 62.5%;
-  border: 2rem solid #171a20;
+  //border: 2rem solid #171a20;
 }
 
 body {
@@ -54,10 +54,9 @@ code {
 
 .header {
   font-size: 2rem;
-  min-height: 70vh;
-  padding: 2rem;
+  margin: 0;
   background: #1d2027 linear-gradient(45deg, #1d2027, #323e4e);
-  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+  // box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 
 .header .navigation {
@@ -104,6 +103,9 @@ code {
   font-size: 4.5rem;
   font-weight: 100;
   padding-top: 5rem;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .logo-box {
@@ -112,7 +114,10 @@ code {
 }
 
 .mobile-components-box {
-  text-align:center;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .mobile-components-image {
@@ -120,13 +125,69 @@ code {
 }
 
 .underline-warm {
-  background: transparent linear-gradient(to right, #d435d8, #e80463, #f34841) no-repeat 0 93%;
+  background: transparent linear-gradient(to right, #d435d8, #e80463, #f34841)
+    no-repeat 0 93%;
   background-size: 100% 0.4rem;
 }
 
 .underline-cool {
-  background: transparent linear-gradient(to right, #ffc000, #ffb400, #f55e31) no-repeat 0 93%;
+  background: transparent linear-gradient(to right, #ffc000, #ffb400, #f55e31)
+    no-repeat 0 93%;
   background-size: 100% 0.4rem;
+}
+
+.skills-col {
+  background: #171a20;
+
+  h2 {
+    font-family: "din-condensed";
+    font-weight: 100;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #7b8390;
+    margin: 3rem 5rem 0;
+  }
+
+  li {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem;
+    background: #2c3442;
+    width: 8rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 1rem;
+    color:#aeb6c1;
+
+    i, svg {
+      display: block;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.experience-col {
+  background: #1d2027;
+
+  h2 {
+    font-family: "din-condensed";
+    font-weight: 100;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #7b8390;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @include respond(phone) {
