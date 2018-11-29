@@ -6,14 +6,13 @@
     }
   }
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media (max-width: 62em) {
       //900px
       @content;
     }
   }
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
-      //1200px
+    @media (max-width: 85em) {
       @content;
     }
   }
@@ -52,11 +51,22 @@ code {
 //   padding: .5rem;
 // }
 
+#root {
+  max-width:150rem;
+  margin: 0 auto;
+  box-shadow: 0 0 5rem #000;
+}
+
 .header {
   font-size: 2rem;
   margin: 0;
+  padding: 2rem 6rem 0;
   background: #1d2027 linear-gradient(45deg, #1d2027, #323e4e);
   // box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+
+  .hero {
+    padding: 8rem 0 10rem;
+  }
 }
 
 .header .navigation {
@@ -109,7 +119,6 @@ code {
 }
 
 .logo-box {
-  margin: 2rem;
   text-align: left;
 }
 
@@ -152,10 +161,7 @@ code {
     display: inline-block;
     text-align: center;
     margin: 1rem;
-    background: #2c3442;
     width: 8rem;
-    border: 1px solid #000000;
-    border-radius: 5px;
     padding: 1rem;
     color:#aeb6c1;
 
@@ -175,8 +181,13 @@ code {
     font-weight: 100;
     font-size: 2rem;
     text-transform: uppercase;
-    text-align: center;
     color: #7b8390;
+    margin: 3rem 5rem 0;
+  }
+
+  p {
+    margin: 3rem 5rem 0;
+    font-size: 1.4rem;
   }
 }
 
@@ -190,9 +201,13 @@ code {
   }
 }
 
-@include respond(phone) {
-  .logo-box {
-    text-align: center;
+@include respond(big-desktop) {
+
+}
+
+@include respond(tab-land) {
+  .hero-message {
+    font-size: 4rem;
   }
 }
 
@@ -200,12 +215,37 @@ code {
   .logo-box {
     text-align: center;
   }
+  .header {
+    .hero {
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .hero-message {
+    font-size: 3rem;
+    padding:0 0 5rem 0;
+  }
+  .mobile-components-image {
+      height: 25rem;
+  }
 }
 
-@include respond(tab-land) {
-  font-size: 70%;
-}
-
-@include respond(big-desktop) {
-  font-size: 80%;
+@include respond(phone) {
+  .logo-box {
+    text-align: center;
+  }
+  .header {
+    padding: 2rem 0 0 0;
+    .hero {
+      padding: 0;
+    }
+  }
+  .hero-message {
+    font-size: 3rem;
+    text-align: center;
+    padding:0 0 5rem 0;
+  }
+  .mobile-components-image {
+      height: 25rem;
+  }
 }
